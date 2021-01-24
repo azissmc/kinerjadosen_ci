@@ -14,18 +14,19 @@
         -webkit-transition: all .3s;
         transition: all .3s;
     }
+    
 </style>
 
   <body>
     
     <!-- Preloader -->
-    <!-- <div id="js-preloader" class="js-preloader">
+    <div id="js-preloader" class="js-preloader">
       <div class="content">
         <img src="<?= base_url()?>assets/gambar/ltitle.png" alt="">
       </div>
       <div class="preloader-inner">
       </div>
-    </div> -->
+    </div>
 
     <?php $this->load->view('components/navbar')?>
     
@@ -53,41 +54,41 @@
                                 <div class="section-heading">
                                     <h2 style="color: #fff">Welcome <br>belum punya akun? ayo daftar</h2>
                                 </div>
-                            <form action="<?= base_url('Regis/daftar')?>" method="post">
+                            <form action="<?= base_url('regis')?>" method="post">
                                 <div class="row justify-content-center">
                                     <div class="col-lg-6 mb-3">
-                                        <input type="text" name="nim" placeholder="Masukan nim..." >
+                                        <input type="text" name="nim" placeholder="Masukan nim..." value="<?= set_value('nim')?>" >
                                         <?= form_error ('nim','<small class="text-danger">','</small>')?>
                                     </div>
                                     <div class="col-lg-6 mb-3">
-                                        <input type="text" name="nama" placeholder="Masukan nama..." >
+                                        <input type="text" name="nama" placeholder="Masukan nama..." value="<?= set_value('nama')?>">
                                         <?= form_error ('nama','<small class="text-danger">','</small>')?>
                                     </div>
                                 </div>
                                 <div class="row justify-content-center">
                                     <div class="col-lg-12 mb-3">
-                                        <input type="email" name="email" placeholder="Masukan email..." >
+                                        <input type="email" name="email" placeholder="Masukan email..." value="<?= set_value('email')?>">
                                         <?= form_error ('email','<small class="text-danger">','</small>')?>
                                     </div>
                                 </div>
                                 <div class="row justify-content-center">
                                     <div class="col-lg-6 mb-3">
-                                        <select name="" class="slc" name="id_fakultas">
+                                        <select class="slc" name="id_fakultas">
                                             <option value="">Pilih Fakultas</option>
                                             <?php foreach($fakultas as $fkt):?>
                                             <option value="<?= $fkt['id_fakultas']?>"><?= $fkt['nama']?></option>
                                             <?php endforeach;?>
                                         </select>
-                                        <?= form_error ('fakultas','<small class="text-danger">','</small>')?>
+                                        <?= form_error ('id_fakultas','<small class="text-danger">','</small>')?>
                                     </div>
                                     <div class="col-lg-6 mb-3">
-                                        <select name="" class="slc" name="id_jurusan">
+                                        <select class="slc" name="id_jurusan">
                                             <option value="">Pilih Jurusan</option>
                                             <?php foreach($jurusan as $jr):?>
                                             <option value="<?= $jr['id_jurusan']?>"><?= $jr['jurusan']?></option>
                                             <?php endforeach;?>
                                         </select>
-                                        <?= form_error ('jurusan','<small class="text-danger">','</small>')?>
+                                        <?= form_error ('id_jurusan','<small class="text-danger">','</small>')?>
                                     </div>
                                 </div>
                                 <div class="row justify-content-center">

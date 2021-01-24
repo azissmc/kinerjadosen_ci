@@ -11,6 +11,7 @@
     <!-- Fonts -->
     
     <link rel="stylesheet" href="<?= base_url()?>assets/fonts/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="<?= base_url()?>assets/styles/sweetalert.css">
 
     <link rel="stylesheet" href="<?= base_url()?>assets/styles/bootstrap.css" />
     <link rel="stylesheet" href="<?= base_url()?>assets/styles/main.css" />

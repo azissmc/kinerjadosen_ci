@@ -29,7 +29,7 @@
                             <div class="col-lg-6 align-self-center">
                                 <div class="left-image">
                                     <div class="main-decoration">
-                                        <img src="<?= base_url()?>assets/images/free-quote-left-image.png" alt="">
+                                        <img src="<?= base_url()?>assets/images/logo1.png" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -37,11 +37,11 @@
                                 <div class="section-heading">
                                     <h2 style="color: #fff">Login Mahasiswa</h2>
                                 </div>
-                                <?php echo $this->session->flashdata('message'); ?>
+                            <?php echo $this->session->flashdata('message'); ?>
                             <form action="<?= base_url('login-mahasiswa')?>" method="POST">
                                 <div class="row justify-content-center">
                                     <div class="col-lg-12 mb-3">
-                                        <input type="text" name="nim" placeholder="Masukan nim...">
+                                        <input type="text" name="nim" placeholder="Masukan nim..." value="<?= set_value('nim')?>">
                                         <?= form_error ('nim','<small class="text-danger">','</small>')?>
                                     </div>
                                 </div>
@@ -87,7 +87,11 @@
     
 
     <?php $this->load->view('components/footer')?>
-    
+    <script>
+        function berhasil(){
+            swal.fire("Berhasil", "Silahkan Login", "success");
+        }
+    </script>    
 
   </body>
 

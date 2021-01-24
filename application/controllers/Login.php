@@ -46,4 +46,11 @@ class Login extends CI_Controller
         $this->load->view('login/loginDosen');
        
     }
+
+    public function loginAdmin()
+    {
+        $judul['title'] = "Login | Admin";
+        $this->load->view('components/header', $judul);
+        $this->load->view('login/loginAdmin');
+    }
 }

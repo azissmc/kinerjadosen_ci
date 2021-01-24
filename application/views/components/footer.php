@@ -49,7 +49,7 @@
             </div>
             <div class="col-lg-12">
               <div class="sub-footer">
-                <p>Copyright © 2020 <a href="#">Kemahasiswaan Universitas Nasional PASIM</a>. All rights reserved.</p>
+                <p>Copyright © <?= date('Y')?> <a href="javascript:void(0);">Kemahasiswaan Universitas Nasional PASIM</a>. All rights reserved.</p>
               </div>
             </div>
           </div>
@@ -77,4 +77,7 @@
     <script src="<?= base_url()?>assets/scripts/vendors/jquery.countTo.js"></script>
     <script src="<?= base_url()?>assets/scripts/vendors/slide-nav.min.js"></script>
     <script src="<?= base_url()?>assets/scripts/vendors/accordions.js"></script>
-    <script src="<?= base_url()?>assets/scripts/main.js"></script>
+    <script src="<?= base_url()?>assets/scripts/main1.js"></script>
+
+    <!-- sweetalert -->
+    <script type="text/javascript" src="<?= base_url()?>assets/scripts/vendors/sweetalert.min.js"></script>

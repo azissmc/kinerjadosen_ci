@@ -29,7 +29,7 @@
                             <div class="col-lg-6 align-self-center">
                                 <div class="left-image">
                                     <div class="main-decoration">
-                                        <img src="<?= base_url()?>assets/images/free-quote-left-image.png" alt="">
+                                        <img src="<?= base_url()?>assets/images/logo1.png" alt="">
                                     </div>
                                 </div>
                             </div>

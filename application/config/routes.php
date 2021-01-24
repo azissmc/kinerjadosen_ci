@@ -59,5 +59,11 @@ $route['daftar-dosen']          = 'Dosen/daftarDosen';
 $route['komentar/(:num)']       = 'Dosen/komentar/$1';
 $route['blog-detail/(:num)']    = 'Blog/blogDetail/$1';
 
+
+// admin
+$route['admin.kinerjadosen']    = 'Login/loginAdmin';
+$route['data-admin']            = 'Admin/dataAdmin';
+$route['data-mahasiswa']        = 'Admin/dataMahasiswa';
+$route['data-dosen']            = 'Admin/dataDosen';
 $route['404_override']          = '';
 $route['translate_uri_dashes']  = FALSE;
