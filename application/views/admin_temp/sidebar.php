@@ -79,12 +79,12 @@
                     </li>
                     <li class="<?php if($menu == 'data mahasiswa') echo 'active';?>">
                         <a href="<?= base_url('data-mahasiswa')?>">
-                            <i class="fa fa-th"></i> <span>Data Mahasiswa</span>
+                            <i class="fa fa-user"></i> <span>Data Mahasiswa</span>
                         </a>
                     </li>
                     <li class="<?php if($menu == 'data dosen') echo 'active';?>">
                         <a href="<?= base_url('data-dosen')?>">
-                            <i class="fa fa-pie-chart"></i>
+                            <i class="fa fa-user-secret"></i>
                             <span>Data Dosen</span>
                         </a>
                     </li>
@@ -98,7 +98,7 @@
                         </a>
                         <ul class="treeview-menu">
                             <li><a href="#"><i class="fa fa-circle-o"></i> Data Informasi</a></li>
-                            <li><a href="#"><i class="fa fa-circle-o"></i> Data Rektorat</a></li>
+                            <li class="<?php if($menu == 'data rektorat') echo 'active';?>"><a href="<?= base_url('data-rektorat')?>"><i class="fa fa-circle-o"></i> Data Rektorat</a></li>
                             <li><a href="#"><i class="fa fa-circle-o"></i> Data Aduan</a></li>
                             <li><a href="#"><i class="fa fa-circle-o"></i> Data Mata Kuliah</a></li>
                         </ul>

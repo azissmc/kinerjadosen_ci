@@ -20,8 +20,6 @@
   $.widget.bridge('uibutton', $.ui.button);
 </script>
 <!-- Bootstrap 3.3.7 -->
-<script src="<?= base_url()?>assets1/bower_components/jquery/dist/jquery.min.js"></script>
-<!-- Bootstrap 3.3.7 -->
 <script src="<?= base_url()?>assets1/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- DataTables -->
 <script src="<?= base_url()?>assets1/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
@@ -34,10 +32,12 @@
 <script src="<?= base_url()?>assets1/dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="<?= base_url()?>assets1/dist/js/demo.js"></script>
+<script src="<?= base_url()?>assets1/dist/js/pages/dashboard.js"></script>
 <script>
         $(function () {
             $('#data-admin').DataTable()
             $('#data-dosen').DataTable()
+            $('#data-rektorat').DataTable()
             $('#data-mahasiswa').DataTable()
             $('#example2').DataTable({
             'paging'      : true,
