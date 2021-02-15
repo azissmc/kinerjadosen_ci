@@ -84,10 +84,9 @@
                           <li><?= date("F d, Y", strtotime($berita['created_date']))?></li>
                         </ul>
                         <h4><?= $berita['judul']?></h4>
-                        <p class="first-text">Craft beer cloud bread photo booth you probably haven't heard of them beard la croix. Microdosing tousled twee viral thun dercats austin. Unicorn chambray tofu meditation hexagon artisan, fingerstache chillwave microdosing. Poke yuccie fingers tache hoodie tumeric wolf, roof party ennui blue bottle. Yuccie typewriter trust fund salvia chillwave 8-bit pour-over sustain able fingerstache biodiesel man bun tattooed.</p>
-                        <blockquote>“Flexitarian paleo celiac VHS viral. Kale chips subway tile jianbing four banjo gentrify pook heirloom rony flexitarian fixie food truck.“</blockquote>
-                        <p class="second-text">Banh mi flannel copper mug meggings, leggings tote bag kombucha cray schlitz actually succulents waistcoat yuccie. Flan nel artisan try-hard, tbh farm-to-table pickled tote chambray mumblecore semiotics green juice adaptogen.</p>
-                        <p>Cold-pressed affogato pork belly lomo, leggings butcher hell of keffiyeh ethical austin disrupt. Sartorial tacos intelligentsia knausgaard, unicorn kale chips brooklyn cardigan four dollar toast microdosing bespoke. Mumblecore fanny pack tousled tumeric pop-up yuccie sustainable.</p>
+                        <p class="first-text">
+                          <?= $berita['keterangan']?>
+                        </p>
                         <div class="share-tags">
                           <div class="row">
                             <div class="col-lg-6">

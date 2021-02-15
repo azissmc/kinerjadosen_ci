@@ -22,7 +22,7 @@
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                     <img src="<?= base_url()?>assets1/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-                    <span class="hidden-xs">Alexander Pierce</span>
+                    <span class="hidden-xs"><?= $this->login;?></span>
                     </a>
                     <ul class="dropdown-menu">
                     <!-- User image -->
@@ -56,19 +56,19 @@
             <!-- Sidebar user panel -->
                 <div class="user-panel">
                     <div class="pull-left image">
-                        <img src="<?= base_url()?>assets1/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                        <img src="<?= base_url()?>gambar-konten/Logopasim.png" class="img-circle" alt="User Image">
                     </div>
                     <div class="pull-left info">
-                        <p>Alexander Pierce</p>
-                        <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                        <br>
+                        <div><i class="fa fa-circle text-success"></i> Online</div>
                     </div>
                 </div>
             <!-- sidebar menu: : style can be found in sidebar.less -->
                 <ul class="sidebar-menu" data-widget="tree">
                     <li class="header">MAIN NAVIGATION</li>
-                    <li class="<?php if($menu == 'admin') echo 'active bg-red';?>">
+                    <li class="<?php if($menu == 'admin') echo 'active';?>">
                         <a href="<?= base_url('admin')?>">
-                            <i class="fa fa-dashboard"></i> <span>Home</span>
+                            <i class="fa fa-home"></i> <span>Home</span>
                         </a>
                     </li>
                     <li class="<?php if($menu == 'data admin') echo 'active bg-red';?>">
@@ -88,6 +88,25 @@
                             <span>Data Dosen</span>
                         </a>
                     </li>
+                    <li class="<?php if($menu == 'data matakuliah') echo 'active';?>">
+                        <a href="<?= base_url('data-matakuliah')?>">
+                            <i class="fa fa-book"></i>
+                            <span>Data Mata Kuliah</span>
+                        </a>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-graduation-cap"></i>
+                            <span>Data Rektorat</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li class="<?php if($menu == 'kategori rektorat') echo 'active';?>"><a href="<?= base_url('kategori-rektorat')?>"><i class="fa fa-circle-o"></i> Kategori Rektorat</a></li>
+                            <li class="<?php if($menu == 'data rektorat') echo 'active';?>"><a href="<?= base_url('data-rektorat')?>"><i class="fa fa-circle-o"></i> Rektorat</a></li>
+                        </ul>
+                    </li>
                     <li class="treeview">
                         <a href="#">
                             <i class="fa fa-laptop"></i>
@@ -98,9 +117,22 @@
                         </a>
                         <ul class="treeview-menu">
                             <li><a href="#"><i class="fa fa-circle-o"></i> Data Informasi</a></li>
-                            <li class="<?php if($menu == 'data rektorat') echo 'active';?>"><a href="<?= base_url('data-rektorat')?>"><i class="fa fa-circle-o"></i> Data Rektorat</a></li>
                             <li><a href="#"><i class="fa fa-circle-o"></i> Data Aduan</a></li>
-                            <li><a href="#"><i class="fa fa-circle-o"></i> Data Mata Kuliah</a></li>
+                            <li class="<?php if($menu == 'data-kontak') echo 'active';?>"><a href="<?= base_url('data-kontak')?>"><i class="fa fa-circle-o"></i> Data Kontak</a></li>
+                            <li class="<?php if($menu == 'berita') echo 'active';?>"><a href="<?= base_url('data-berita')?>"><i class="fa fa-circle-o"></i> Data Berita</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-briefcase"></i>
+                            <span>About</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li class="<?php if($menu == 'about') echo 'active';?>"><a href="<?= base_url('informasi-about')?>"><i class="fa fa-circle-o"></i> Informasi About</a></li>
+                            <li class="<?php if($menu == 'kemahasiswaan') echo 'active';?>"><a href="<?= base_url('kemahasiswaan')?>"><i class="fa fa-circle-o"></i> Kemahasiswaan</a></li>
                         </ul>
                     </li>
                 </ul>

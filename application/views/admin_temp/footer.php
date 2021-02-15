@@ -1,6 +1,6 @@
 <!-- /.content-wrapper -->
 <footer class="main-footer">
-    <strong>Copyright &copy; <?= date('Y')?> <a href="javascript:void(0)">Kemahasiswaan Universitas Nasional PASIM</a>.</strong> All rights
+    <strong>Copyright &copy; 2021 <a href="javascript:void(0)">Kemahasiswaan Universitas Nasional PASIM</a>.</strong> All rights
     reserved.
   </footer>
 
@@ -33,12 +33,16 @@
 <!-- AdminLTE for demo purposes -->
 <script src="<?= base_url()?>assets1/dist/js/demo.js"></script>
 <script src="<?= base_url()?>assets1/dist/js/pages/dashboard.js"></script>
+<script src="<?= base_url()?>assets1/bower_components/ckeditor/ckeditor.js"></script>
+<script src="<?= base_url()?>assets1/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
 <script>
+        // data tables
         $(function () {
             $('#data-admin').DataTable()
             $('#data-dosen').DataTable()
             $('#data-rektorat').DataTable()
             $('#data-mahasiswa').DataTable()
+            $('#example').DataTable()
             $('#example2').DataTable({
             'paging'      : true,
             'lengthChange': false,
@@ -47,7 +51,44 @@
             'info'        : true,
             'autoWidth'   : false
             })
-        })
-    </script>
+
+            // textarea editor
+            CKEDITOR.replace('editor1')
+            //bootstrap WYSIHTML5 - text editor
+            $('.textarea').wysihtml5()
+            })
+
+            // untuk menampilkan preview gambar
+            function tampilkanPreview(foto,idpreview)
+          {
+            var gb = foto.files;
+            for (var i = 0; i < gb.length; i++)
+            {
+                var gbPreview = gb[i];
+                var imageType = /image.*/;
+                var preview=document.getElementById(idpreview);
+                var reader = new FileReader();
+                if (gbPreview.type.match(imageType))
+                {
+                //jika tipe data sesuai
+                preview.file = gbPreview;
+                reader.onload = (function(element)
+                {
+                    return function(e)
+                    {
+                    element.src = e.target.result;
+                    };
+                })(preview);
+                //membaca data URL gambar
+                reader.readAsDataURL(gbPreview);
+                }
+                else
+                {
+                    //jika tipe data tidak sesuai
+                    alert("Tipe file tidak sesuai. Gambar harus bertipe .png, .gif atau .jpg.");
+                }
+            }
+          }
+</script>
 </body>
 </html>

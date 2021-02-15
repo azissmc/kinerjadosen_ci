@@ -49,25 +49,68 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller']    = 'Home';
+$route['default_controller']        = 'Home';
 
-$route['pilih-login']           = 'Login/pilihLogin';
-$route['login-mahasiswa']       = 'Login/loginMahasiswa';
-$route['login-dosen']           = 'Login/loginDosen';
-$route['informasi']             = 'Dosen/informasi';
-$route['daftar-dosen']          = 'Dosen/daftarDosen';
-$route['komentar/(:num)']       = 'Dosen/komentar/$1';
-$route['blog-detail/(:num)']    = 'Blog/blogDetail/$1';
-
+$route['pilih-login']               = 'Login/pilihLogin';
+$route['login-mahasiswa']           = 'Login/loginMahasiswa';
+$route['login-dosen']               = 'Login/loginDosen';
+$route['login-admin']               = 'Login/loginAdmin';
+$route['informasi']                 = 'Dosen/informasi';
+$route['daftar-dosen']              = 'Dosen/daftarDosen';
+$route['komentar/(:num)']           = 'Dosen/komentar/$1';
+$route['blog-detail/(:num)']        = 'Blog/blogDetail/$1';
 
 // admin
-$route['admin.kinerjadosen']    = 'Login/loginAdmin';
-$route['data-admin']            = 'Admin/dataAdmin';
-$route['data-mahasiswa']        = 'Admin/dataMahasiswa';
-$route['data-dosen']            = 'Admin/dataDosen';
-$route['data-rektorat']         = 'Admin/dataRektorat';
-$route['tambah-admin']          = 'Admin/tambahAdmin';
-$route['tambah-dosen']          = 'Admin/tambahDosen';
-$route['ubah-data-admin/(:num)']= 'Admin/ubahAdmin/$1';
+// data
+
+$route['data-admin']                = 'Admin/dataAdmin';
+$route['data-mahasiswa']            = 'Admin/dataMahasiswa';
+$route['data-dosen']                = 'Admin/dataDosen';
+$route['data-rektorat']             = 'Admin/dataRektorat';
+$route['kategori-rektorat']         = 'Admin/kategoriRektorat';
+$route['informasi-about']           = 'Admin/about';
+$route['kemahasiswaan']             = 'Admin/kemahasiswaan';
+$route['data-berita']               = 'Admin/dataBerita';
+$route['data-kontak']               = 'Admin/dataKontak';
+
+// detail
+$route['detail-mahasiswa/(:num)']   = 'Admin/detailMahasiswa/$1';
+$route['detail-dosen/(:num)']       = 'Admin/detailDosen/$1';
+$route['detail-rektorat/(:num)']    = 'Admin/detailRektorat/$1';
+$route['detail-berita/(:num)']      = 'Admin/detailBerita/$1';
+
+// tambah
+$route['tambah-admin']              = 'Admin/tambahAdmin';
+$route['tambah-mahasiswa']          = 'Admin/tambahMahasiswa';
+$route['tambah-dosen']              = 'Admin/tambahDosen';
+$route['tambah-rektorat']           = 'Admin/tambahRektorat';
+$route['tambah-kategori-rektorat']  = 'Admin/tambahKategoriRektorat';
+$route['tambah-about']              = 'Admin/tambahAbout';
+$route['tambah-kemahasiswaan']      = 'Admin/tambahKemahasiswaan';
+$route['tambah-berita']             = 'Admin/tambahBerita';
+$route['tambah-kontak']             = 'Admin/tambahKontak';
+
+// ubah
+$route['ubah-data-admin/(:num)']    = 'Admin/ubahAdmin/$1';
+$route['ubah-mahasiswa/(:num)']     = 'Admin/ubahMahasiswa/$1';
+$route['ubah-dosen/(:num)']         = 'Admin/ubahDosen/$1';
+$route['ubah-kategori-rektorat/(:num)']  = 'Admin/ubahKategoriRektorat/$1';
+$route['ubah-rektorat/(:num)']      = 'Admin/ubahRektorat/$1';
+$route['ubah-about/(:num)']         = 'Admin/ubahAbout/$1';
+$route['ubah-kemahasiswaan/(:num)'] = 'Admin/ubahKemahasiswaan/$1';
+$route['ubah-berita/(:num)']        = 'Admin/ubahBerita/$1';
+$route['ubah-kontak/(:num)']        = 'Admin/ubahKontak/$1';
+
+// hapus
+$route['hapus-admin/(:num)']        = 'Admin/hapusAdmin/$1';
+$route['hapus-mahasiswa/(:num)']    = 'Admin/hapusMahasiswa/$1';
+$route['hapus-dosen/(:num)']        = 'Admin/hapusDosen/$1';
+$route['hapus-rektorat/(:num)']     = 'Admin/hapusRektorat/$1';
+$route['hapus-kategoriRt/(:num)']   = 'Admin/hapusKategoriRektorat/$1';
+$route['hapus-about/(:num)']        = 'Admin/hapusAbout/$1';
+$route['hapus-kemahasiswaan/(:num)'] = 'Admin/hapusKemahasiswaan/$1';
+$route['hapus-berita/(:num)']       = 'Admin/hapusBerita/$1';
+$route['hapus-kontak/(:num)']       = 'Admin/hapusKontak/$1';
+
 $route['404_override']          = '';
 $route['translate_uri_dashes']  = FALSE;

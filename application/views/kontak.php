@@ -68,14 +68,15 @@
       <!-- Contact Info -->
       <section class="contact-info">
         <div class="container">
+          <?php foreach($kontak as $kt):?>
           <div class="row">
             <div class="col-lg-4">
               <div class="info-item">
                 <div class="icon">
                   <i class="fa fa-envelope"></i>
                 </div>
-                <h4>Email Address</h4>
-                <p><a href="#">contact@oxana.com</a><br><a href="#">info@oxana.com</a></p>
+                <h4>Alamat Email</h4>
+                <p><?= $kt['email']?></p>
               </div>
             </div>
             <div class="col-lg-4">
@@ -83,8 +84,8 @@
                 <div class="icon">
                   <i class="fa fa-phone"></i>
                 </div>
-                <h4>Phone Number</h4>
-                <p><a href="#">+1 547 6877 534</a><br><a href="#">001 547 6877 534</a></p>
+                <h4>Nomor Telepon</h4>
+                <p><?= $kt['no_hp']?></p>
               </div>
             </div>
             <div class="col-lg-4">
@@ -92,11 +93,12 @@
                 <div class="icon">
                   <i class="fa fa-map-marker"></i>
                 </div>
-                <h4>Street Address</h4>
-                <p><a href="#">342 Better Street<br>Peculiar, KS 64078</a></p>
+                <h4>Alamat Kampus</h4>
+                <p><?= $kt['alamat']?></p>
               </div>
             </div>
           </div>
+          <?php endforeach;?>
         </div>
       </section>
 
@@ -113,19 +115,19 @@
                 <form id="message" action="<?= base_url('kontak/kirim')?>" method="post">
                   <div class="row">
                     <div class="col-lg-4 col-md-12 col-sm-12">
-                      <input name="name" type="text" class="form-control" id="name" placeholder="Full Name">
+                      <input name="name" type="text" class="form-control" id="name" placeholder="Full Name" required>
                       <?= form_error ('name','<small class="text-danger">','</small>')?>
                     </div>
                     <div class="col-lg-4 col-md-12 col-sm-12">
-                      <input name="email" type="text" class="form-control" id="email" pattern="[^ @]*@[^ @]*" placeholder="E-Mail Address">
+                      <input name="email" type="text" class="form-control" id="email" pattern="[^ @]*@[^ @]*" placeholder="E-Mail Address" required>
                       <?= form_error ('email','<small class="text-danger">','</small>')?>
                     </div>
                     <div class="col-lg-4 col-md-12 col-sm-12">
-                      <input name="subject" type="text" class="form-control" id="subject" placeholder="Subject">
+                      <input name="subject" type="text" class="form-control" id="subject" placeholder="Subject" required>
                       <?= form_error ('subject','<small class="text-danger">','</small>')?>
                     </div>
                     <div class="col-lg-12">
-                      <textarea name="message" rows="6" class="form-control" id="your-message" placeholder="Your Message"></textarea>
+                      <textarea name="message" rows="6" class="form-control" id="your-message" placeholder="Your Message" required></textarea>
                       <?= form_error ('message','<small class="text-danger">','</small>')?>
                     </div>
                     <div class="col-lg-12">

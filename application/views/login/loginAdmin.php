@@ -39,16 +39,16 @@
                                     <h2 style="color: #fff">Login Admin</h2>
                                 </div>
                             <?php echo $this->session->flashdata('message'); ?>
-                            <form action="<?= base_url('admin')?>" method="POST">
+                            <form action="<?= base_url('login-admin')?>" method="POST">
                                 <div class="row justify-content-center">
                                     <div class="col-lg-12 mb-3">
-                                        <input type="text" name="nim" placeholder="Masukan nim..." value="<?= set_value('nim')?>">
-                                        <?= form_error ('nim','<small class="text-danger">','</small>')?>
+                                        <input type="text" name="username" placeholder="Masukan username..." value="<?= set_value('username')?>" required>
+                                        <?= form_error ('username','<small class="text-danger">','</small>')?>
                                     </div>
                                 </div>
                                 <div class="row justify-content-center">
                                     <div class="col-lg-12">
-                                        <input type="password" name="password" placeholder="Masukan password...">
+                                        <input type="password" name="password" placeholder="Masukan password..." required>
                                     </div>
                                     <?= form_error ('password','<small class="text-danger">','</small>')?>
                                 </div>

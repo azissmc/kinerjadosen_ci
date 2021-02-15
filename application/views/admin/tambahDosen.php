@@ -26,13 +26,14 @@
           <div class="box box-danger">
               <br>
             <div class="box-body">
-                <form action="">
+                <form action="<?= base_url('tambah-dosen')?>" method="post">
                     <div class="form-group">
                         <label>NIDN/NIK</label>
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                            <input type="text" name="nidn" class="form-control" placeholder="Nidn/Nik...">
+                            <input type="text" name="nidn" class="form-control" placeholder="Nidn/Nik..." value="<?= set_value('nidn')?>">
                         </div>
+                        <?php echo form_error('nidn','<small class="text-danger">','</small>');?>
                     </div>
                     <br>
 
@@ -40,8 +41,9 @@
                         <label>Nama</label>
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                            <input type="text" name="nama" class="form-control" placeholder="Nama...">
+                            <input type="text" name="nama" class="form-control" placeholder="Nama..." value="<?= set_value('nama')?>" required>
                         </div>
+                        <?php echo form_error('nama','<small class="text-danger">','</small>');?>
                     </div>
                     <br>
     
@@ -49,8 +51,9 @@
                         <label>Password</label>
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-key"></i></span>
-                            <input type="text" name="password" class="form-control" placeholder="Password...">
+                            <input type="text" name="password" class="form-control" placeholder="Password..." required>
                         </div>
+                        <?php echo form_error('password','<small class="text-danger">','</small>');?>
                     </div>
                     <br>
                     <div class="box-footer">

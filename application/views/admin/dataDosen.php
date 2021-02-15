@@ -20,6 +20,7 @@
     <!-- Main content -->
     <section class="content">
       <a href="<?= base_url('tambah-dosen')?>" class="btn btn-warning btn-md mb"><i class="fa fa-plus-circle"> Tambah Data</i></a>
+      <?php echo $this->session->flashdata('message'); ?>
       <div class="row">
         <div class="col-xs-12">
           <div class="box">
@@ -43,9 +44,9 @@
                         <td><?= $dsn['nama']?></td>
                         <td><?= $dsn['email']?></td>
                         <td>
-                          <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-copy"></i></a>
-                          <a href="#" class="btn btn-success btn-xs"><i class="fa fa-pencil"></i></a>
-                          <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i></a>
+                          <a href="<?= base_url('detail-dosen/'. $dsn['id_user'])?>" class="btn btn-primary btn-xs"><i class="fa fa-copy"></i></a>
+                          <a href="<?= base_url('ubah-dosen/'. $dsn['id_user'])?>" class="btn btn-success btn-xs"><i class="fa fa-pencil"></i></a>
+                          <a href="#" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#myModal1"><i class="fa fa-trash"></i></a>
                         </td>
                     </tr>
                     <?php endforeach;?>
@@ -72,4 +73,21 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
+
+  <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModal1">
+        <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Anda yakin ingin menghapus data ini?</h3>
+                </div>
+                <!-- end /.modal-header -->
+
+                <div class="modal-body">
+                    <a href="<?= base_url('hapus-dosen/'. $dsn['id_user'])?>" class="btn btn--round btn-danger btn--default">Ya</a>
+                    <button class="btn btn--round modal_close" data-dismiss="modal">Tidak</button>
+                </div>
+                <!-- end /.modal-body -->
+            </div>
+        </div>
+    </div>
 

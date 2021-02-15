@@ -76,9 +76,9 @@
             </div>
             <div class="col-lg-6 align-self-center">
               <div class="video-thumb">
-                <img src="<?= base_url()?>assets/gambar/<?= $about1['gambar']?>" alt="">
-                <br><br><br>
+                <img src="<?= base_url()?>gambar/<?= $about1['gambar']?>" alt="">
               </div>
+                <br><br><br>
             </div>
           </div>
         </div>
@@ -103,7 +103,7 @@
                       <li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
                     </ul>
                   </div>
-                  <img src="<?= base_url()?>assets/gambar/<?= $ab['foto']?>" alt="">
+                  <img src="<?= base_url()?>gambar/<?= $ab['foto']?>" alt="">
                 </div>
                 <div class="down-content">
                   <h4><?= $ab['nama']?></h4>

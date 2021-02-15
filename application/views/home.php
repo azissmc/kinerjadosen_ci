@@ -70,7 +70,7 @@
                 <div class="item">
                   <div class="testimonial-item">
                     <div class="image">
-                      <img style="width: 75px;height:75px;border-radius:50%" src="<?= base_url()?>assets/gambar/<?= $rt['foto']?>" alt="">
+                      <img style="width: 75px;height:75px;border-radius:50%" src="<?= base_url()?>gambar/<?= $rt['foto']?>" alt="">
                     </div>
                     <h6 class="mt-3"><?= $rt['nama_rektorat']?></h6>
                     <span><?= $rt['jabatan']?></span>
@@ -172,7 +172,7 @@
                   <div class="case-item">
                     <a href="<?= base_url('blog-detail/'. $brt['id_berita'])?>">
                     <div class="case-thumb">
-                      <img src="<?= base_url()?>assets/gambar/<?= $brt['gambar']?>" alt="">
+                      <img src="<?= base_url()?>gambar/<?= $brt['gambar']?>" alt="">
                     </div>
                     <div class="down-content">
                       <h4><?= $brt['judul']?></h4>

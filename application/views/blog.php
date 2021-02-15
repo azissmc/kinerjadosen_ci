@@ -76,7 +76,7 @@
                   <div class="case-item">
                     <a href="<?= base_url('blog-detail/'. $brt['id_berita'])?>">
                     <div class="case-thumb">
-                      <img src="<?= base_url()?>assets/gambar/<?= $brt['gambar']?>" alt="">
+                      <img src="<?= base_url()?>gambar/<?= $brt['gambar']?>" alt="">
                     </div>
                     <div class="down-content">
                       <h5><?= $brt['judul']?></h5>

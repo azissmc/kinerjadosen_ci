@@ -131,7 +131,7 @@
             </div>
             <div class="col-lg-12">
               <div class="sub-footer">
-                <p>Copyright © <?= date('Y')?> <a href="<?= base_url('admin.kinerjadosen')?>">Kemahasiswaan Universitas Nasional PASIM</a>. All rights reserved.</p>
+                <p>Copyright © <?= date('Y')?> <a href="<?= base_url('login-admin')?>">Kemahasiswaan Universitas Nasional PASIM</a>. All rights reserved.</p>
               </div>
             </div>
           </div>
