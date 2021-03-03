@@ -6,20 +6,6 @@
         border-radius: 50%;
     }
 </style>
-    <body>
-    
-        <!-- Preloader -->
-        <div id="js-preloader" class="js-preloader">
-            <div class="content">
-                <img src="<?= base_url()?>assets/gambar/ltitle.png" alt="">
-            </div>
-            <div class="preloader-inner"></div>
-        </div>
-
-        <?php $this->load->view('components/navbar')?>
-        
-        
-
         <div class="main-content">
         
             <!-- Page Heading -->
@@ -63,7 +49,14 @@
                             <div class="col-lg-12">
                                 <div class="blog-post post-details">
                                     <div class="down-content">
-                                        <img class="gambar" src="<?= base_url()?>assets/images/author-01.png" alt=""><h4><?= $postingan['nama']?></h4>
+                                        <?php 
+                                            if($postingan['foto'] == "" || empty($postingan['foto'])){
+                                                $foto = 'guest.png';
+                                            }else{
+                                                $foto = $postingan['foto'];
+                                            }    
+                                        ?>
+                                        <img class="gambar" src="<?= base_url()?>gambar/<?= $foto?>" alt=""><h4><?= $postingan['nama']?></h4>
                                         <ul>
                                             <li><small><?= date("F d, Y", strtotime($postingan['tanggal']))?></small></li>
                                         </ul>
@@ -79,20 +72,21 @@
                                         <ul>
                                             <?php foreach($komentar as $km):
                                                 if($km['foto'] == "" || empty($km['foto'])){
-                                                    $foto = 'comavatar.jpg';
+                                                    $foto = 'guest.png';
                                                 }else{
                                                     $foto = $km['foto'];
                                                 }    
                                             ?>
                                             <li>
                                                 <div class="comment-thumb">
-                                                    <img style="width:55px;height:55px;border-radius:50%" src="<?= base_url()?>assets/gambar/<?= $foto?>" alt="">
+                                                    <img style="width:55px;height:55px;border-radius:50%" src="<?= base_url()?>gambar/<?= $foto?>" alt="">
                                                 </div>
                                                 <div class="right-content">
                                                     <h4><?= $km['nama']?> <span>Febuary 15, 2020</span></h4>
                                                     <p><?= $km['komentar']?>.</p>
                                                 </div>
                                             </li>
+                                            <br>
                                             <?php endforeach;?>
                                         </ul>
                                 </div>
@@ -102,10 +96,10 @@
                                     <div class="blog-heading">
                                         <h4>Beri Komentar disini</h4>
                                     </div>
-                                    <form id="comment" action="#" method="post">
+                                    <form action="<?= base_url('simpan-komentar/'. $postingan['id_informasi'])?>" method="post">
                                         <div class="row">
                                             <div class="col-lg-12">
-                                                <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your Message" required=""></textarea>
+                                                <textarea name="komentar" rows="6" class="form-control" placeholder="Komentar..." required=""></textarea>
                                             </div>
                                             <div class="col-lg-12">
                                                 <button type="submit" id="form-submit" class="filled-button">Kirim Komentar</button>

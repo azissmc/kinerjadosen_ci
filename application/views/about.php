@@ -1,28 +1,4 @@
 
-
-  <body>
-    
-    <!-- Preloader -->
-    <div id="js-preloader" class="js-preloader">
-      <div class="content">
-        <img src="<?= base_url()?>assets/gambar/ltitle.png" alt="">
-      </div>
-      <div class="preloader-inner">
-      </div>
-    </div>
-
-    <?php $this->load->view('components/navbar')?>
-    
-    <!-- Search -->
-    <div id="search">
-      <button type="button" class="close">×</button>
-        <form>
-            <input type="search" value="" placeholder="Type to search..." required="">
-            <button type="submit" class="primary-button"><i class="fa fa-search"></i></button>
-        </form>
-    </div>
-    
-
     <div class="main-content">
       
         <!-- Main Banner -->
@@ -95,7 +71,7 @@
               </div>
             </div>
             <?php foreach($about as $ab):?>
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-6">
               <div class="team-item">
                 <div class="team-thumb">
                   <div class="hover-effect">

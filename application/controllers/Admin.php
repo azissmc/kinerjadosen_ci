@@ -7,13 +7,23 @@
         {
             parent:: __construct();
             $this->load->model('Madmin');
+            if ( ! $this->session->userdata('username'))
+ 	   	    { 
+                // Allow some methods?
+                $allowed = array(
+                    
+                );
+                if ( ! in_array($this->router->fetch_method(), $allowed))
+                {
+                    redirect('login-admin');
+			    }
+ 	   	    }
         }
 
         public function index()
         {
 
-            $getLogin = $this->db->get_where('admin',['username'=> $this->session->userdata('username')])->row_array();
-		    $this->login = $getLogin['username'];
+            
 
             $menu['menu'] = 'admin';
             $judul['title'] = "Admin";

@@ -5,30 +5,6 @@
         border-radius: 50%;
     }
 </style>
-
-<body>
-    
-    <!-- Preloader -->
-    <div id="js-preloader" class="js-preloader">
-      <div class="content">
-        <img src="<?= base_url()?>assets/gambar/ltitle.png" alt="">
-      </div>
-      <div class="preloader-inner">
-      </div>
-    </div>
-
-    <?php $this->load->view('components/navbar')?>
-    
-    <!-- Search -->
-    <div id="search">
-      <button type="button" class="close">×</button>
-        <form>
-            <input type="search" value="" placeholder="Type to search..." required="">
-            <button type="submit" class="primary-button"><i class="fa fa-search"></i></button>
-        </form>
-    </div>
-    
-
     <div class="main-content">
       
       <!-- Page Heading -->
@@ -78,15 +54,15 @@
                     <div class="row">
                         <?php foreach($informasi as $inf):
                             if($inf['foto'] == "" || empty($inf['foto'])){
-                                $foto = 'comavatar.jpg';
+                                $foto = 'guest.png';
                               }else{
                                   $foto = $inf['foto'];
                               }
                         ?>
                         <div class="col-lg-12">
-                            <div class="blog-post post-details">
+                            <div class="blog-post post-details" style="background:url('<?= base_url('assets/images/fun-facts-bg.png')?>')">
                                 <div class="down-content">
-                                    <img style="width:55px;height:55px;border-radius:50%" src="<?= base_url()?>assets/gambar/<?= $foto?>" alt=""><h4><?= $inf['nama']?></h4>
+                                    <img style="width:55px;height:55px;border-radius:50%" src="<?= base_url()?>gambar/<?= $foto?>" alt=""><h4><?= $inf['nama']?></h4>
                                     <ul>
                                         <li><small><?= date("F d, Y", strtotime($inf['tanggal']))?></small></li>
                                     </ul>
@@ -95,7 +71,7 @@
                                         <div class="row">
                                             <div class="col-lg-6">
                                                 <ul class="tags">
-                                                    <li><a href="<?= base_url('komentar/').$inf['id_informasi']?>">Komentar <sup><?php echo $this->db->get_where('komentar',array('id_informasi'=>$inf['id_informasi']))->num_rows(); ?></sup></a></li>
+                                                    <li><a href="<?= base_url('komentar/').$inf['id_informasi']?>"><?php echo $this->db->get_where('komentar',array('id_informasi'=>$inf['id_informasi']))->num_rows(); ?> Komentar</a></li>
                                                 </ul>
                                             </div>
                                         </div>

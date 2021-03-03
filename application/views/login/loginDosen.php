@@ -1,21 +1,4 @@
 
-
-  <body>
-    
-    <!-- Preloader -->
-    <div id="js-preloader" class="js-preloader">
-      <div class="content">
-        <img src="<?= base_url()?>assets/gambar/ltitle.png" alt="">
-      </div>
-      <div class="preloader-inner">
-      </div>
-    </div>
-
-    <?php $this->load->view('components/navbar')?>
-    
-    
-    
-
     <div class="main-content">
       
       <!-- Main Banner -->
@@ -37,15 +20,17 @@
                                 <div class="section-heading">
                                     <h2 style="color: #fff">Login Dosen</h2>
                                 </div>
-                            <form action="#">
+                            <?php echo $this->session->flashdata('message'); ?>
+                            <form action="<?= base_url('login-dosen')?>" method="post">
                                 <div class="row justify-content-center">
                                     <div class="col-lg-12 mb-3">
-                                        <input type="text" id="name" placeholder="Masukan nidn/nik..." required="">
+                                        <input type="text" id="name" name="nidn" placeholder="Masukan nidn/nik..." required="">
                                     </div>
                                 </div>
                                 <div class="row justify-content-center">
                                     <div class="col-lg-12">
-                                        <input type="password" id="name" placeholder="Masukan password..." required="">
+                                        <input type="password" id="name" name="password"
+                                         placeholder="Masukan password..." required="">
                                     </div>
                                 </div>
                                 <div class="row justify-content-center">

@@ -5,23 +5,7 @@
     border-radius: 50%;
   }
 </style>
-
-  <body>
     
-    <!-- Preloader -->
-    <div id="js-preloader" class="js-preloader">
-      <div class="content">
-        <img src="<?= base_url()?>assets/gambar/ltitle.png" alt="">
-      </div>
-      <div class="preloader-inner">
-      </div>
-    </div>
-
-    <?php $this->load->view('components/navbar')?>
-    
-    
-    
-
     <div class="main-content">
       
       <!-- Main Banner -->
@@ -138,13 +122,13 @@
      <section class="fun-facts">
         <div class="container">
           <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-6">
               <div class="count-area-content">
                 <div class="count-digit"><?= $this->jumlahdosen?></div>
                 <div class="count-title">Dosen</div>
               </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-6">
               <div class="count-area-content">
                 <div class="count-digit"><?= $this->jumlahmhs?></div>
                 <div class="count-title">Mahasiswa</div>
@@ -168,15 +152,17 @@
             <div class="col-lg-12">
               <div class="row masonry-layout filters-content normal-col-gap">
                 <?php foreach($berita as $brt):?>
-                <div class="col-lg-4 masonry-item">
+                <div class="col-lg-4 col-6 masonry-item">
                   <div class="case-item">
-                    <a href="<?= base_url('blog-detail/'. $brt['id_berita'])?>">
                     <div class="case-thumb">
                       <img src="<?= base_url()?>gambar/<?= $brt['gambar']?>" alt="">
                     </div>
                     <div class="down-content">
-                      <h4><?= $brt['judul']?></h4>
-                      <span>Analysis, Digital Marketing</span>
+                        <h4><?= $brt['judul']?></h4>
+                        <p><?= word_limiter($brt['keterangan'], 15) ?></p>
+                        <div class="main-purple-button">
+                          <a href="<?= base_url('blog-detail/'. $brt['id_berita'])?>">Lanjut baca</a>
+                        </div>
                     </div>
                     </a>
                   </div>

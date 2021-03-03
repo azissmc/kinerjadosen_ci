@@ -1,21 +1,3 @@
-
-
-  <body>
-    
-    <!-- Preloader -->
-    <div id="js-preloader" class="js-preloader">
-      <div class="content">
-        <img src="<?= base_url()?>assets/gambar/ltitle.png" alt="">
-      </div>
-      <div class="preloader-inner">
-      </div>
-    </div>
-
-    <?php $this->load->view('components/navbar')?>
-    
-    
-    
-
     <div class="main-content">
       
       <!-- Main Banner -->
@@ -58,7 +40,7 @@
                                 </div>
                             </form>
                             <p>
-                                <span style="color: #fff">Lupa <a href="#" style="color:black">password </a>?</span>
+                                <span style="color: #fff">Lupa <a href="<?= base_url('lupa-password')?>" style="color:black">password </a>?</span>
                                 <span class="ml-3" style="color: #fff">Belum punya <a href="<?= base_url()?>Regis" style="color:black">akun</a>?</span>
                             </p>
                         </div>

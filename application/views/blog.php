@@ -1,21 +1,4 @@
 
-
-  <body>
-    
-    <!-- Preloader -->
-    <div id="js-preloader" class="js-preloader">
-      <div class="content">
-        <img src="<?= base_url()?>assets/gambar/ltitle.png" alt="">
-      </div>
-      <div class="preloader-inner">
-      </div>
-    </div>
-
-    <?php $this->load->view('components/navbar')?>
-    
-    
-    
-
     <div class="main-content">
       
       <!-- Main Banner -->
@@ -71,46 +54,42 @@
             </div>
             <div class="col-lg-12">
               <div class="row masonry-layout filters-content normal-col-gap">
-              <?php foreach($berita as $brt):?>
-                <div class="col-lg-4 masonry-item">
+                <?php foreach($berita as $brt):?>
+                <div class="col-lg-4 col-6 masonry-item">
                   <div class="case-item">
-                    <a href="<?= base_url('blog-detail/'. $brt['id_berita'])?>">
                     <div class="case-thumb">
                       <img src="<?= base_url()?>gambar/<?= $brt['gambar']?>" alt="">
                     </div>
                     <div class="down-content">
-                      <h5><?= $brt['judul']?></h5>
-                      <span>kemahasiswaan</span>
+                        <h4><?= $brt['judul']?></h4>
+                        <p><?= word_limiter($brt['keterangan'], 25) ?></p>
+                        <div class="main-purple-button">
+                          <a href="<?= base_url('blog-detail/'. $brt['id_berita'])?>">Lanjut baca</a>
+                        </div>
                     </div>
                     </a>
                   </div>
                 </div>
-              <?php endforeach;?>
+                <?php endforeach;?>
               </div>
+              <section class="blog-page">
+                <div class="blog-posts blog-posts-second-version">
+                  <div class="col-lg-12">
+                    <div class="blog-pagination">
+                      <ul>
+                        <li><a href="#">1</a></li>
+                        <li class="active"><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#"><i class="fa fa-angle-double-right"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </section>
             </div>
           </div>
         </div>
-      </section>
-
-        <section class="blog-page">
-            <div class="container">
-                <div class="blog-posts">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-12">
-                            <div class="blog-pagination">
-                            <ul>
-                                <li><a href="#">1</a></li>
-                                <li class="active"><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#"><i class="fa fa-angle-double-right"></i></a></li>
-                            </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>     
-
+      </section>     
     </div>
     
 

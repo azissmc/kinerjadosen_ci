@@ -16,23 +16,6 @@
     }
     
 </style>
-
-  <body>
-    
-    <!-- Preloader -->
-    <div id="js-preloader" class="js-preloader">
-      <div class="content">
-        <img src="<?= base_url()?>assets/gambar/ltitle.png" alt="">
-      </div>
-      <div class="preloader-inner">
-      </div>
-    </div>
-
-    <?php $this->load->view('components/navbar')?>
-    
-    
-    
-
     <div class="main-content">
       
       <!-- Main Banner -->
@@ -57,47 +40,47 @@
                             <form action="<?= base_url('regis')?>" method="post">
                                 <div class="row justify-content-center">
                                     <div class="col-lg-6 mb-3">
-                                        <input type="text" name="nim" placeholder="Masukan nim..." value="<?= set_value('nim')?>" >
+                                        <input type="text" name="nim" placeholder="Masukan nim..." value="<?= set_value('nim')?>" required>
                                         <?= form_error ('nim','<small class="text-danger">','</small>')?>
                                     </div>
                                     <div class="col-lg-6 mb-3">
-                                        <input type="text" name="nama" placeholder="Masukan nama..." value="<?= set_value('nama')?>">
+                                        <input type="text" name="nama" placeholder="Masukan nama..." value="<?= set_value('nama')?>" required>
                                         <?= form_error ('nama','<small class="text-danger">','</small>')?>
                                     </div>
                                 </div>
                                 <div class="row justify-content-center">
                                     <div class="col-lg-12 mb-3">
-                                        <input type="email" name="email" placeholder="Masukan email..." value="<?= set_value('email')?>">
+                                        <input type="email" name="email" placeholder="Masukan email..." value="<?= set_value('email')?>" required>
                                         <?= form_error ('email','<small class="text-danger">','</small>')?>
                                     </div>
                                 </div>
                                 <div class="row justify-content-center">
                                     <div class="col-lg-6 mb-3">
-                                        <select class="slc" name="id_fakultas">
+                                        <select class="slc" name="fakultas" required>
                                             <option value="">Pilih Fakultas</option>
                                             <?php foreach($fakultas as $fkt):?>
-                                            <option value="<?= $fkt['id_fakultas']?>"><?= $fkt['nama']?></option>
+                                            <option value="<?= $fkt['nama']?>"><?= $fkt['nama']?></option>
                                             <?php endforeach;?>
                                         </select>
-                                        <?= form_error ('id_fakultas','<small class="text-danger">','</small>')?>
+                                        <?= form_error ('fakultas','<small class="text-danger">','</small>')?>
                                     </div>
                                     <div class="col-lg-6 mb-3">
-                                        <select class="slc" name="id_jurusan">
+                                        <select class="slc" name="jurusan" required>
                                             <option value="">Pilih Jurusan</option>
                                             <?php foreach($jurusan as $jr):?>
-                                            <option value="<?= $jr['id_jurusan']?>"><?= $jr['jurusan']?></option>
+                                            <option value="<?= $jr['jurusan']?>"><?= $jr['jurusan']?></option>
                                             <?php endforeach;?>
                                         </select>
-                                        <?= form_error ('id_jurusan','<small class="text-danger">','</small>')?>
+                                        <?= form_error ('jurusan','<small class="text-danger">','</small>')?>
                                     </div>
                                 </div>
                                 <div class="row justify-content-center">
                                     <div class="col-lg-6 mb-3">
-                                        <input type="password" name="password" placeholder="Masukan password..." >
+                                        <input type="password" name="password" placeholder="Masukan password..." required>
                                         <?= form_error ('password','<small class="text-danger">','</small>')?>
                                     </div>
                                     <div class="col-lg-6 mb-3">
-                                        <input type="password" name="con_pass" placeholder="Masukan konfirmasi password..." >
+                                        <input type="password" name="con_pass" placeholder="Masukan konfirmasi password..." required>
                                         <?= form_error ('con_pass','<small class="text-danger">','</small>')?>
                                     </div>
                                 </div>

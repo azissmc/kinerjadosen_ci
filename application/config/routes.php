@@ -56,9 +56,15 @@ $route['login-mahasiswa']           = 'Login/loginMahasiswa';
 $route['login-dosen']               = 'Login/loginDosen';
 $route['login-admin']               = 'Login/loginAdmin';
 $route['informasi']                 = 'Dosen/informasi';
+$route['daftar-mahasiswa']          = 'Regis/index';
 $route['daftar-dosen']              = 'Dosen/daftarDosen';
 $route['komentar/(:num)']           = 'Dosen/komentar/$1';
 $route['blog-detail/(:num)']        = 'Blog/blogDetail/$1';
+$route['logout-admin']              = 'Login/LogoutAdmin';
+$route['logout']                    = 'Login/Logout';
+$route['lupa-password']             = 'LupaPassword/index';
+$route['reset-password']            = 'LupaPassword/resetPassword';
+$route['ganti-password']            = 'LupaPassword/gantiPassword';
 
 // admin
 // data
@@ -72,6 +78,12 @@ $route['informasi-about']           = 'Admin/about';
 $route['kemahasiswaan']             = 'Admin/kemahasiswaan';
 $route['data-berita']               = 'Admin/dataBerita';
 $route['data-kontak']               = 'Admin/dataKontak';
+$route['profilmhs']                 = 'Profil/profilMhs';
+$route['profildsn']                 = 'Profil/profilDsn';
+$route['ubah-fotomhs']              = 'Profil/ubahFotoMhs';
+$route['ubah-fotodsn']              = 'Profil/ubahFotoDsn';
+$route['ubah-foto1']                = 'Profil/ubahFoto1';
+$route['ubah-foto2']                = 'Profil/ubahFoto2';
 
 // detail
 $route['detail-mahasiswa/(:num)']   = 'Admin/detailMahasiswa/$1';
@@ -89,6 +101,8 @@ $route['tambah-about']              = 'Admin/tambahAbout';
 $route['tambah-kemahasiswaan']      = 'Admin/tambahKemahasiswaan';
 $route['tambah-berita']             = 'Admin/tambahBerita';
 $route['tambah-kontak']             = 'Admin/tambahKontak';
+$route['tambah-informasi']          = 'Dosen/tambahInformasi';
+$route['simpan-komentar/(:num)']    = 'Dosen/simpanKomentar/$1';
 
 // ubah
 $route['ubah-data-admin/(:num)']    = 'Admin/ubahAdmin/$1';

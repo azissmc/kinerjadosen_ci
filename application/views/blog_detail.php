@@ -1,28 +1,4 @@
 
-
-  <body>
-    
-    <!-- Preloader -->
-    <div id="js-preloader" class="js-preloader">
-      <div class="content">
-        <img src="<?= base_url()?>assets/gambar/ltitle.png" alt="">
-      </div>
-      <div class="preloader-inner">
-      </div>
-    </div>
-
-    <?php $this->load->view('components/navbar')?>
-    
-    <!-- Search -->
-    <div id="search">
-      <button type="button" class="close">×</button>
-        <form>
-            <input type="search" value="" placeholder="Type to search..." required="">
-            <button type="submit" class="primary-button"><i class="fa fa-search"></i></button>
-        </form>
-    </div>
-    
-
     <div class="main-content">
       
       <!-- Page Heading -->
@@ -76,7 +52,7 @@
                   <div class="col-lg-12">
                     <div class="blog-post post-details">
                       <div class="blog-thumb">
-                        <img src="<?= base_url()?>assets/gambar/<?= $berita['gambar']?>" alt="">
+                        <img src="<?= base_url()?>gambar/<?= $berita['gambar']?>" alt="">
                       </div>
                       <div class="down-content">
                         <ul>
@@ -121,17 +97,17 @@
                       </div>
                       <ul>
                         <?php foreach($populer as $pop):?>
-                        <li>
-                          <a href="<?= base_url('blog-detail/'. $pop['id_berita'])?>">
-                            <div class="blog-thumb">
-                              <img style="width:100%;height:145px" src="<?= base_url()?>assets/gambar/<?= $pop['gambar']?>" alt="">
-                            </div>
-                            <div class="right-content">
-                              <h6><?= $pop['judul']?></h6>
-                              <span><?= date("F d, Y", strtotime($pop['created_date']))?></span>
-                            </div>
-                          </a>
-                        </li>
+                          <li>
+                            <a href="<?= base_url('blog-detail/'. $pop['id_berita'])?>">
+                              <div class="blog-thumb">
+                                <img style="width:100%;height:145px" src="<?= base_url()?>gambar/<?= $pop['gambar']?>" alt="">
+                              </div>
+                              <div class="right-content">
+                                <h6><?= $pop['judul']?></h6>
+                                <span><?= date("F d, Y", strtotime($pop['created_date']))?></span>
+                              </div>
+                            </a>
+                          </li>
                         <?php endforeach;?>
                       </ul>
                     </div>

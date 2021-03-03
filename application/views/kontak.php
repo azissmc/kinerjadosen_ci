@@ -1,28 +1,4 @@
 
-
-  <body>
-    
-    <!-- Preloader -->
-    <div id="js-preloader" class="js-preloader">
-      <div class="content">
-        <img src="<?= base_url()?>assets/gambar/ltitle.png" alt="">
-      </div>
-      <div class="preloader-inner">
-      </div>
-    </div>
-
-    <?php $this->load->view('components/navbar')?>
-    
-    <!-- Search -->
-    <div id="search">
-      <button type="button" class="close">×</button>
-        <form>
-            <input type="search" value="" placeholder="Type to search...">
-            <button type="submit" class="primary-button"><i class="fa fa-search"></i></button>
-        </form>
-    </div>
-    
-
     <div class="main-content">
       
       <!-- Main Banner -->

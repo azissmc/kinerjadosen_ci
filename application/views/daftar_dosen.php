@@ -1,28 +1,4 @@
 
-
-  <body>
-    
-    <!-- Preloader -->
-    <div id="js-preloader" class="js-preloader">
-      <div class="content">
-        <img src="<?= base_url()?>assets/gambar/ltitle.png" alt="">
-      </div>
-      <div class="preloader-inner">
-      </div>
-    </div>
-
-    <?php $this->load->view('components/navbar')?>
-    
-    <!-- Search -->
-    <div id="search">
-      <button type="button" class="close">×</button>
-        <form>
-            <input type="search" value="" placeholder="Type to search..." required="">
-            <button type="submit" class="primary-button"><i class="fa fa-search"></i></button>
-        </form>
-    </div>
-    
-
     <div class="main-content">
       
         <!-- Main Banner -->
@@ -32,18 +8,18 @@
                 <div class="inner-content" style="margin-top: -50px">
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-6 align-self-center">
+                            <!-- <div class="col-lg-6 align-self-center">
                                 <div class="section-heading">
                                     <h2 style="color: #fff; font-size:55px">Daftar Dosen</h2>
                                 </div>
-                            </div>
-                            <div class="col-lg-6 align-self-center">
+                            </div> -->
+                            <!-- <div class="col-lg-6 align-self-center">
                                 <div class="left-image">
                                     <div class="main-decoration">
                                         <img style="width: 290px" src="<?= base_url()?>assets/images/semangat.png" alt="">
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>    
                 </div>
@@ -75,13 +51,13 @@
             </div>
             <?php foreach($data as $dt):
               if($dt['foto'] == "" || empty($dt['foto'])){
-                $foto = 'comavatar.jpg';
+                $foto = 'guest.png';
               }else{
                   $foto = $dt['foto'];
               }
               
             ?>
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-6">
               <div class="team-item">
                 <div class="team-thumb">
                   <div class="hover-effect">
@@ -89,7 +65,7 @@
                       <li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
                     </ul>
                   </div>
-                  <img style="height:250px;" src="<?= base_url()?>assets/gambar/<?= $foto?>" alt="">
+                  <img style="height:200px;" src="<?= base_url()?>gambar/<?= $foto?>" alt="">
                 </div>
                 <div class="down-content">
                   <h4><?= $dt['nama']?></h4>

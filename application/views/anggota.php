@@ -1,29 +1,5 @@
 
-
-  <body>
-    
-    <!-- Preloader -->
-    <!-- <div id="js-preloader" class="js-preloader">
-      <div class="content">
-        <img src="<?= base_url()?>assets/gambar/ltitle.png" alt="">
-      </div>
-      <div class="preloader-inner">
-      </div>
-    </div> -->
-
-    <?php $this->load->view('components/navbar')?>
-    
-    <!-- Search -->
-    <div id="search">
-      <button type="button" class="close">×</button>
-        <form>
-            <input type="search" value="" placeholder="Type to search..." required="">
-            <button type="submit" class="primary-button"><i class="fa fa-search"></i></button>
-        </form>
-    </div>
-    
-
-    <div class="main-content">
+  <div class="main-content">
       
       <!-- Page Heading -->
         <div class="parallax-banner">
@@ -66,7 +42,7 @@
 
       
       <!-- Recent Cases -->
-      <section class="blog-page">
+      <!-- <section class="blog-page">
         <div class="container">
           <div class="row">
               <div class="blog-posts">
@@ -78,19 +54,20 @@
                       <ul>
                         <?php foreach($data as $dt):
                           if($dt['foto'] == "" || empty($dt['foto'])){
-                            $foto = 'comavatar.jpg';
+                            $foto = 'guest.png';
                           }else{
                             $foto = $dt['foto'];
                           } 
                         ?>
                         <li>
                           <div class="comment-thumb">
-                            <img style="width:55px;height:55px;border-radius:8px" src="<?= base_url()?>assets/gambar/<?= $foto?>" alt="">
+                            <img style="width:55px;height:55px;border-radius:8px" src="<?= base_url()?>gambar/<?= $foto?>" alt="">
                           </div>
                           <div class="right-content">
                             <h4><?= $dt['nama']?> <span><?= $dt['hak_akses']?></span></h4>
                           </div>
                         </li>
+                        <br>
                         <?php endforeach;?>
                       </ul>
                     </div>
@@ -98,7 +75,35 @@
               </div>
           </div>
         </div>
-      </section>
+      </section> -->
+      <section class="blog-page">
+            <div class="container">
+                <div class="blog-sidebar">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10 col-sm-6 col-xs-6">
+                            <div class="blog-posts">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="leave-comment" style="background:url('<?= base_url('assets/images/free-quote.jpg')?>')">
+                                          <div class="blog-heading">
+                                              <h4 style="color:whitesmoke"><?= $this->jumlahanggota?> Anggota</h4>
+                                          </div>
+                                          <form action="<?= base_url('Dosen/addInformasi')?>" method="post">
+                                              <div class="row">
+                                                  <div class="col-lg-12 col-md-12 col-sm-12">
+                                                    
+                                                  </div>
+                                              </div>
+                                          </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </div>
     

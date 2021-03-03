@@ -22,7 +22,7 @@
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                     <img src="<?= base_url()?>assets1/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-                    <span class="hidden-xs"><?= $this->login;?></span>
+                    <span class="hidden-xs"><?= $this->session->userdata('username');?></span>
                     </a>
                     <ul class="dropdown-menu">
                     <!-- User image -->
@@ -36,11 +36,8 @@
                     </li>
                     <!-- Menu Footer-->
                     <li class="user-footer">
-                        <div class="pull-left">
-                        <a href="#" class="btn btn-default btn-flat">Profile</a>
-                        </div>
-                        <div class="pull-right">
-                        <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                        <div class="pull-center">
+                        <a href="<?= base_url('logout-admin')?>" class="btn btn-default btn-flat">Sign out</a>
                         </div>
                     </li>
                     </ul>

@@ -4,30 +4,25 @@
           <div class="row">
             <div class="col-lg-3">
               <div class="footer-heading">
-                <h4>Kemahasiswaan</h4>
+                
+                  <img style="width:50px" src="<?= base_url()?>assets/gambar/ltitle.png" alt="">
+               
               </div>
-              <p class="about-oxana">Shaman synth retro slow-carb. Vape taxidermy twee, put a bird on it fran xezen celiac unicorn gerstache coloring book.</p>
+              <p class="about-oxana">Kinerja Dosen merupakan teknologi baru di Universitas Nasional Pasim berupa website untuk mempermudah penilaian kinerja dosen.</p>
             </div>
             <div class="col-lg-3">
               <div class="footer-heading">
-                <h4>Useful Links</h4>
+                <h4>Tentang Kami</h4>
               </div>
-              <ul class="useful-links">
-                <li><a href="#">About Oxana</a></li>
-                <li><a href="#">Our Services</a></li>
-                <li><a href="#">Help Center</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-              </ul>
-              <ul class="useful-links">
-                <li><a href="#">Recent Posts</a></li>
-                <li><a href="#">Case Studies</a></li>
-                <li><a href="#">Testimonials</a></li>
-                <li><a href="#">FAQ’s</a></li>
+              <ul class="more-info">
+                <li><a href="<?= base_url('about')?>">Tentang</a></li>
+                <li><a href="<?= base_url('blog')?>">Berita</a></li>
+                <li><a href="#">FAQ</a></li>
               </ul>
             </div>
             <div class="col-lg-3">
               <div class="footer-heading">
-                <h4>Get In Touch!</h4>
+                <h4>Kontak!</h4>
               </div>
               <ul class="more-info">
                 <li>Email: <a href="#">contact@oxana.com</a></li>
@@ -42,9 +37,9 @@
               <p>Shaman synth retro slow-carb. Vape taxidermy twee, put a bird.</p>
               <ul class="social-icons">
                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
+                <li><a href="#"><i class="fa fa-envelope"></i></a></li>
               </ul>
             </div>
             <div class="col-lg-12">
